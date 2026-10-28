@@ -1,0 +1,10 @@
+torch==2.14.1
+torchvision==0.29.1
+opencv-contrib-python>=4.13,<5
+numpy>=2.4,<3
+Pillow>=12,<13
+streamlit>=1.41,<2
+scikit-learn>=1.9,<2
+PyYAML>=6.0.3,<7
+timm==0.9.12
+huggingface-hub>=0.26,<2

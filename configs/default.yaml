@@ -1,0 +1,23 @@
+model:
+  inference_backend: oo01_pretrained
+  architecture: timm_efficientnet_b0_video
+  image_size: 224
+  frame_count: 16
+  checkpoint_repository: oo01/deepfake-video-classifier
+  checkpoint_revision: 3b237c2c820fab51cca13b80d726e4be5876de23
+  training_baseline_architecture: efficientnet_b0
+inference:
+  sample_interval_seconds: 1.0
+  max_frames: 16
+  max_duration_seconds: 600
+  max_file_size_mb: 500
+  max_width: 3840
+  max_height: 2160
+  min_predictions: 3
+  aggregation: median
+  low_threshold: 0.30
+  high_threshold: 0.70
+face_detector:
+  backend: opencv_haar
+  padding_fraction: 0.30
+  select_largest_face: true
